@@ -1,0 +1,329 @@
+#header{
+  
+    display: flex;
+    font-size: 24px;
+    font-style: bold;
+    justify-content: space-between;
+    height: 80px;
+    box-shadow:   1px 2px 3px aqua;;
+    background: rgb(25, 9, 54);
+    color: aqua;
+}
+body{
+    background: aliceblue;
+}
+#nav{
+    display: flex;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    font-style: normal;
+    flex-direction: row;
+    color: aqua;
+}
+.logo{
+    margin: 10px;
+
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+.menu{
+    text-decoration: none;
+    display: flex;
+    margin: 5px;
+    padding: 3px;
+    color: aqua;
+
+    box-shadow:   1px 2px 3px rgb(2, 192, 192);;
+    width: 60px;
+    height: 20px;
+    transition: 0.5s;
+}
+li{
+    text-decoration: none;
+    list-style-type: none;
+
+}
+a:hover{
+    box-shadow: -5px -5px 3px aqua;
+    cursor: grab;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+article{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 70%;
+    height: 950px;
+    box-shadow:   1px 2px 3px rgb(8, 8, 70);;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+#gambar{
+    margin-left: 30%;
+    width: 500px;
+    height: 530px;
+    border-radius: 50%;
+    background: url("asset/pp.png");
+    background-size: cover;
+}
+#jadwal{
+    display: flex;
+    flex-wrap: wrap;
+}
+.jadwal{
+    display: flex;
+    width: 200px;
+    height: 400px;
+    flex-wrap: wrap;
+    margin-top: 20%;
+    height: auto;
+    top: 0;
+    text-align: center;
+    margin: 5%;
+    box-shadow: 1px 2px 2px rgb(8, 8, 70);
+    transition: 1.5s ;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.jadwal:hover{
+      box-shadow: -5px -6px 2px rgb(8, 8, 70);
+      cursor: pointer;
+}
+h1{
+    font-size: 30px;
+    font-family: sans-serif;
+    text-align: center;
+}
+.mahasiswa{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+ .data{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 220px;
+    height: 70px;
+    border: solid black 1px;
+    color: black;
+    background: rgb(8, 8, 70);
+    border-radius: 10px;
+    color: rgb(244, 252, 252);
+    margin-left: 50px;
+
+}
+.data:hover{
+    box-shadow: -2px -5px 2px aqua;
+
+}
+#foot{
+    height: 500px;
+    border: solid 5px black;
+}
+
+
+
+.kartu{
+    position: absolute;
+    float: right;
+    top: 50%;
+    left: 80%;transform: translate(-30%,-30%);
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+.kartu .depan{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: url("asset/radie.jpg");
+    background-size: cover;
+    width: 100%;
+    border: solid 3px black;
+    backface-visibility: hidden;
+    transform: rotateX()(0deg);
+    transition: 0.5s;
+}
+.kartu:hover .depan{
+    transform: rotateX(-180deg)
+
+}
+.kartu .belakang{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    transform: rotateX(180deg);
+    transition: 0.5s;
+}
+.kartu:hover .belakang{
+    transform: rotateX(0deg);
+    transition: 1s;
+    
+
+}
+.kartu .belakang .data{
+    position: absolute;
+    color: rgb(8, 12, 12);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+    top: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+#dicoding{
+    background: url("asset/dicoding.png");
+    width: 300px;
+    height: 80px;
+    margin-top: 50%;
+}
+#foot{
+    margin-top: 20px;
+    height: 400px;
+    border: solid 5px black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: rgb(25, 9, 54);
+    color: white;
+}
+.medsos{
+    text-decoration: none;
+    color: aliceblue;
+    border-radius: 5px;
+}
+.judul{
+    width: 300px;
+    height: 40px;
+    border: solid 2px aqua;
+    background: rgb(25, 9, 54);
+    color: aliceblue;
+}
+.menu-toggle{
+    color: aqua;
+    display: none;
+    line-height: 50px;
+    margin: auto;
+    font-size: 50px;
+    cursor: pointer;
+}
+@media (max-width:900px) {
+    header{
+        width: 100%;
+    }
+    .logo{
+        margin: 30px;
+    }
+    nav{
+        /* display: none; */
+        position: absolute;
+        width: 100%;
+        height: 500vh;
+        top: 100px;
+        background: rgb(25, 9, 54);
+        margin: 0;
+        left: -102%;
+        z-index: 2;
+        overflow-x: hidden;
+    }
+    .active{
+        left: 0%;
+        overflow-x: hidden;
+    }
+    nav ul{
+        display: block;
+        margin: 0 auto;
+    }
+    nav ul li{
+        margin-top: 30px;
+        padding: 20px;
+        width: 100px;
+
+    }
+    .menu-toggle{
+        display: block;
+        float: right;
+        padding: 22px;
+        margin: 0;
+    }
+    article{
+        width: 94%;
+        height: auto;
+        margin: 0;
+    }
+    #gambar{
+        background: url('asset/logohp.png');
+        width: 320px;
+        height: 350px;
+        
+        margin-left: 5%;
+    }
+    .kartu{
+        position: relative;
+        display: flex;
+        top: 0%;
+        left: 35%;
+    }
+    #profile{
+        position: relative;
+        display: flex;
+        margin-top: 57%;
+
+    }
+    #foot{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        height: 1000px;
+    }
+    #dicoding{
+        margin-left: 10px;
+    }
+    #catatan{
+        margin-left: 10px;
+
+    }
+    #home{
+        font-size: 20px;
+        align-items: center;
+    }
+    #pengenalan{
+        font-size: 14px;
+    }
+    .judul{
+        align-items: center;
+    }
+    #jadwal{
+        align-items: center;
+
+    }
+    #team{
+        align-items: center;
+    }
+    .mahasiswa{
+        align-items: center;
+        margin-left: 25px;
+    }
+}
